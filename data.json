@@ -1,0 +1,17 @@
+[
+  {
+      "title": "1",
+      "description": "Opis sekcji 1.",
+      "color": "red"
+  },
+  {
+      "title": "2",
+      "description": "Opis sekcji 2.",
+      "color": "green"
+  },
+  {
+      "title": "3",
+      "description": "Opis sekcji 3.",
+      "color": "yellow"
+  }
+]
