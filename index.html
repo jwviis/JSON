@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Dynamiczna Strona z JSON</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wizualizacja JSON</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Załaduj plik JSON</h1>
-        <input type="file" id="jsonFileInput" accept=".json">
-        <div id="content"></div>
-    </div>
+  <div class="container">
+    <h1>📁 Wizualizacja JSON</h1>
 
-    <script src="script.js"></script>
+    <input type="file" id="jsonFileInput" accept=".json">
+    <button id="resetBtn" class="hidden">🔄 Resetuj</button>
+
+    <div id="content"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
