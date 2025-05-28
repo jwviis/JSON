@@ -1,0 +1,17 @@
+[
+  {
+    "title": "1",
+    "description": "pomidor.",
+    "color": "lightgreen"
+  },
+  {
+    "title": "2",
+    "description": "ogorek.",
+    "color": "blue"
+  },
+  {
+    "title": "3",
+    "description": "papryka.",
+    "color": "orange"
+  }
+]
