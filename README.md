@@ -1,33 +1,16 @@
 # JSON
-# JSON Viewer – przeglądarka plików JSON
+# Projekt: Wyświetlanie warzyw z pliku JSON
 
-To jest prosta strona internetowa, która pozwala wczytać plik JSON i zobaczyć jego zawartość w czytelny sposób.
+Ten projekt to prosta strona internetowa, która umożliwia wczytanie pliku `.json` z danymi o warzywach i dynamiczne wyświetlenie ich na stronie.
 
-## 🔧 Co potrafi ta strona?
+## Jak to działa?
 
-- Wczytuje plik `.json` z twojego komputera
-- Pokazuje dane z pliku w kolorowych sekcjach
-- Ma przycisk, który resetuje wszystko
-- Działa bez internetu – wystarczy otworzyć plik w przeglądarce
+1. Użytkownik wybiera plik JSON z danymi o warzywach.
+2. Skrypt JavaScript odczytuje dane z pliku.
+3. Każde warzywo jest wyświetlane jako kolorowa sekcja z tytułem i opisem.
 
+## Technologie
 
-
-# ✨ Funkcje
-Łatwe wczytywanie plików JSON: Wystarczy kliknąć przycisk, aby załadować plik JSON z lokalnego dysku.
-
-Automatyczne renderowanie danych: Aplikacja analizuje zawartość pliku i tworzy odpowiednie sekcje z tytułami, opisami i opcjonalnymi kolorami.
-
-Kolorowanie kart: Każda karta może mieć przypisany indywidualny kolor na podstawie danych z pliku lub zostanie przypisany losowy kolor.
-
-Wielowariantowe style kart: Wybór z trzech różnych wariantów wyświetlania, które zmieniają sposób prezentacji sekcji (np. linie przerywane, gradienty, cienie).
-
-Animacje: Karty pojawiają się z efektami animacyjnymi, które poprawiają doświadczenie użytkownika.
-
-Wskaźniki ikon: Każda sekcja jest oznaczona ikoną, która zależy od indeksu elementu.
-
-Błyskawiczne resetowanie: Możliwość szybkiego wyczyszczenia wczytanych danych za pomocą przycisku "Resetuj".
-
-Obsługa błędów: Jeśli plik JSON jest uszkodzony lub niepoprawny, użytkownik zobaczy komunikat o błędzie.
-
-# 🧠 Struktura danych JSON
-Aplikacja została zaprojektowana z myślą o dwóch głównych strukturach danych JSON. Oczekiwana struktura to lista obiektów, gdzie każdy obiekt posiada co najmniej tytuł, opis i opcjonalnie kolor. Oto przykład struktury:
+- HTML
+- CSS
+- JavaScript 
