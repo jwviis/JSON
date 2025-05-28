@@ -13,7 +13,7 @@ document.getElementById('jsonFileInput').addEventListener('change', e => {
       div.style.background = warzywo.color;
       div.style.fontFamily = 'Arial';
 
-      div.innerHTML = `<h2>${owoc.title}</h2><p>${warzywo.description}</p>`;
+      div.innerHTML = `<h2>${warzywo.title}</h2><p>${warzywo.description}</p>`;
       content.appendChild(div);
     }
   };
