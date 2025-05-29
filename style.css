@@ -19,3 +19,18 @@ body {
   padding: 15px;
   border-radius: 10px;
 }
+
+.style-green {
+  background-color: lightgreen;
+  color: black;
+}
+
+.style-blue {
+  background-color: blue;
+  color: white;
+}
+
+.style-orange {
+  background-color: orange;
+  color: black;
+}
