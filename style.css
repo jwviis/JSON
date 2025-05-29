@@ -14,23 +14,26 @@ body {
   padding: 20px;
 }
 
-.section {
+.variant-primary {
   margin-top: 15px;
   padding: 15px;
   border-radius: 10px;
-}
-
-.style-green {
   background-color: lightgreen;
-  color: black;
+  border: 2px solid green;
 }
 
-.style-blue {
-  background-color: blue;
-  color: white;
+.variant-secondary {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: lightblue;
+  border: 2px solid blue;
 }
 
-.style-orange {
+.variant-tertiary {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
   background-color: orange;
-  color: black;
+  border: 2px solid darkorange;
 }
