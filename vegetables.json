@@ -1,20 +1,20 @@
 [
   {
     "title": "Pomidor",
-    "description": "Pomidor to soczysty owoc, często używany jako warzywo w kuchni.",
+    "description": "Czerwone warzywo, idealne do sałatek.",
     "elementType": "div",
-    "styleVariant": "style-green"
+    "styleVariant": "variant-primary"
   },
   {
     "title": "Ogórek",
-    "description": "Ogórek jest chrupiący i orzeźwiający, idealny do sałatek.",
-    "elementType": "article",
-    "styleVariant": "style-blue"
+    "description": "Zielone warzywo, świetne na kanapki.",
+    "elementType": "section",
+    "styleVariant": "variant-secondary"
   },
   {
     "title": "Papryka",
-    "description": "Papryka dodaje koloru i smaku do wielu potraw.",
-    "elementType": "div",
-    "styleVariant": "style-orange"
+    "description": "Kolorowe warzywo, bogate w witaminy.",
+    "elementType": "article",
+    "styleVariant": "variant-tertiary"
   }
 ]
