@@ -9,7 +9,7 @@ document.getElementById('jsonFileInput').addEventListener('change', e => {
     for (let i = 0; i < dane.length; i++) {
       let warzywo = dane[i];
       let element = document.createElement(warzywo.elementType);
-      element.className = `section ${warzywo.styleVariant}`;
+      element.className = warzywo.styleVariant;
       element.innerHTML = `<h2>${warzywo.title}</h2><p>${warzywo.description}</p>`;
       content.appendChild(element);
     }
