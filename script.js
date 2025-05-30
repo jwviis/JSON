@@ -7,14 +7,15 @@ document.getElementById('jsonFileInput').addEventListener('change', (e) => {
     try {
       const data = JSON.parse(reader.result);
       const content = document.getElementById('content');
-      content.innerHTML = ''; 
+      content.innerHTML = '';
 
       data.forEach((vegetable) => {
-        // Create card container
-        const card = document.createElement(vegetable.elementType || 'div');
-        card.classList.add('vegetable-card', vegetable.styleVariant);
+        const elementType = vegetable.elementType || 'div';
+        const styleVariant = vegetable.styleVariant || 'variant-primary';
 
-       
+        const card = document.createElement(elementType);
+        card.classList.add('vegetable-card', styleVariant);
+
         const title = document.createElement('h2');
         title.textContent = vegetable.title;
 
@@ -23,8 +24,6 @@ document.getElementById('jsonFileInput').addEventListener('change', (e) => {
 
         card.appendChild(title);
         card.appendChild(description);
-
-      
         content.appendChild(card);
       });
     } catch (error) {
