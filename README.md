@@ -1,16 +1,6 @@
-# JSON
-# Projekt: Wyświetlanie warzyw z pliku JSON
-
-Ten projekt to prosta strona internetowa, która umożliwia wczytanie pliku `.json` z danymi o warzywach i dynamiczne wyświetlenie ich na stronie.
-
-## Jak to działa?
-
-1. Użytkownik wybiera plik JSON z danymi o warzywach.
-2. Skrypt JavaScript odczytuje dane z pliku.
-3. Każde warzywo jest wyświetlane jako kolorowa sekcja z tytułem i opisem.
-
-## Technologie
-
-- HTML
-- CSS
-- JavaScript 
+# Funkcjonalność: 
+Dodano obsługę błędów do analizowania JSON i sprawdzania poprawności wprowadzania plików. Skrypt sprawdza teraz, czy plik jest wybrany, i używa try-catch do obsługi nieprawidłowego JSON.
+# Tworzenie DOM:
+Zamiast używać innerHTML, skrypt tworzy pojedyncze elementy DOM (h2, p) dla tytułu i opisu każdego warzywa, dołączając je do pojemnika na kartę. Jest to bezpieczniejsze i łatwiejsze do utrzymania.
+# Struktura JSON:
+Struktura JSON pozostaje taka sama, ponieważ już pozwala na elastyczność w wyborze ElementType i styleVariant. Możesz łatwo dodawać nowe warianty, definiując nowe klasy CSS i odwołując się do nich w JSON.
