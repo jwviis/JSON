@@ -1,35 +1,39 @@
-document.getElementById('jsonFileInput').addEventListener('change', (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+const fileInput = document.getElementById('jsonFileInput');
+const contentDiv = document.getElementById('content');
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+
+  if (!file) {
+    alert('Proszę wybrać plik JSON!');
+    return;
+  }
 
   const reader = new FileReader();
   reader.onload = () => {
     try {
-      const data = JSON.parse(reader.result);
-      const content = document.getElementById('content');
-      content.innerHTML = '';
+      const vegetables = JSON.parse(reader.result);
+      contentDiv.innerHTML = '';
 
-      data.forEach((vegetable) => {
-        const elementType = vegetable.elementType || 'div';
-        const styleVariant = vegetable.styleVariant || 'variant-primary';
-
-        const card = document.createElement(elementType);
-        card.classList.add('vegetable-card', styleVariant);
+      vegetables.forEach((vegetable) => {
+        const card = document.createElement(vegetable.elementType || 'div');
+        card.className = `vegetable-card ${vegetable.styleVariant || 'variant-primary'}`;
 
         const title = document.createElement('h2');
-        title.textContent = vegetable.title;
+        title.textContent = vegetable.title || 'Bez nazwy';
 
         const description = document.createElement('p');
-        description.textContent = vegetable.description;
+        description.textContent = vegetable.description || 'Brak opisu';
 
         card.appendChild(title);
         card.appendChild(description);
-        content.appendChild(card);
+        contentDiv.appendChild(card);
       });
     } catch (error) {
-      console.error('Error parsing JSON:', error);
-      alert('Błąd wczytywania pliku JSON. Sprawdź format pliku.');
+      console.error('Błąd podczas wczytywania JSON:', error);
+      alert('Błąd w pliku JSON! Sprawdź, czy plik jest poprawny.');
     }
   };
+
   reader.readAsText(file);
 });
