@@ -1,39 +1,57 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 #jsonFileInput {
   margin: 20px 0;
   padding: 10px;
   font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
-.container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
 
 .vegetable-card {
-  margin: 15px 0;
+  margin: 10px 0;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 .variant-primary {
-  background-color: lightgreen;
-  border: 2px solid green;
+  background-color: #d4edda;
+  border: 2px solid #28a745;
 }
 
 .variant-secondary {
-  background-color: lightblue;
-  border: 2px solid blue;
+  background-color: #d1ecf1;
+  border: 2px solid #17a2b8;
 }
 
 .variant-tertiary {
-  background-color: orange;
-  border: 2px solid darkorange;
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+}
+
+
+.vegetable-card h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.vegetable-card p {
+  margin: 0;
+  color: #666;
 }
