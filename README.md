@@ -1,22 +1,14 @@
-# Lista Warzyw z JSON
+# Generator HTML z JSON
 
-# Opis projektu
+Ten projekt to prosty generator treści HTML na podstawie danych w formacie JSON. Użytkownik może wczytać plik JSON, a aplikacja dynamicznie wygeneruje elementy HTML z przypisanymi klasami stylów.
 
-Ten projekt wczytuje dane o warzywach z pliku JSON i wyświetla je na stronie. Każda warzywo zawiera nazwę  i opis. 
-# Jak to działa
-Użytkownik wybiera plik JSON za pomocą pola wyboru pliku.
-Aplikacja wczytuje dane z pliku i wyświetla informacje o warzywach w postaci kart
-Jeśli plik JSON jest nieprawidłowy lub nie wybrano żadnego pliku, pojawi się komunikat o błędzie.
+# Zawartość projektu
+	•	index.html – Główna strona aplikacji.
+	•	style.css – Arkusz stylów dla różnych wariantów elementów.
+	•	script.js – Logika do odczytu i przetwarzania pliku JSON.
+	•	Przykładowy plik JSON (można utworzyć na podstawie struktury pokazanej poniżej).
 
-# Struktura projektu
-index.html - Główna strona HTML z polem do wczytywania pliku.
-script.js - Kod JavaScript do wczytywania i przetwarzania pliku JSON.
-styles.css - Style CSS dla strony i  warzyw (trzy warianty stylów: primary, secondary, tertiary).
-vegetables.json - Przykładowy plik JSON z danymi o warzywach (Pomidor, Ogórek, Papryka).
-
-# Jak uruchomić
-Pobierz wszystkie pliki z tego repozytorium.
-Umieść je w jednym folderze.
-Otwórz plik index.html w przeglądarce internetowej.
-Wybierz plik vegetables.json.
- Warzywa pojawią się na stronie.
+# Jak używać
+	1.	Otwórz plik index.html w przeglądarce.
+	2.	Kliknij przycisk „Wybierz plik” i załaduj plik .json o odpowiedniej strukturze.
+	3.	Strona wygeneruje zawartość HTML na podstawie danych z pliku.
