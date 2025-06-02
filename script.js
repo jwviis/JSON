@@ -1,39 +1,25 @@
-const fileInput = document.getElementById('jsonFileInput');
-const contentDiv = document.getElementById('content');
+document.getElementById('jsonFile').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
 
-fileInput.addEventListener('change', (event) => {
-  const file = event.target.files[0];
+    const reader = new FileReader();
 
-  if (!file) {
-    alert('Proszę wybrać plik JSON!');
-    return;
-  }
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            const container = document.getElementById('output');
+            container.innerHTML = '';
 
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const vegetables = JSON.parse(reader.result);
-      contentDiv.innerHTML = '';
+            data.forEach(item => {
+                const el = document.createElement(item.tag);
+                el.className = `var${item.variant}`;
+                el.textContent = item.text;
+                container.appendChild(el);
+            });
+        } catch (error) {
+            alert("Błąd w pliku JSON: " + error.message);
+        }
+    };
 
-      vegetables.forEach((vegetable) => {
-        const card = document.createElement(vegetable.elementType || 'div');
-        card.className = `vegetable-card ${vegetable.styleVariant || 'variant-primary'}`;
-
-        const title = document.createElement('h2');
-        title.textContent = vegetable.title || 'Bez nazwy';
-
-        const description = document.createElement('p');
-        description.textContent = vegetable.description || 'Brak opisu';
-
-        card.appendChild(title);
-        card.appendChild(description);
-        contentDiv.appendChild(card);
-      });
-    } catch (error) {
-      console.error('Błąd podczas wczytywania JSON:', error);
-      alert('Błąd w pliku JSON! Sprawdź, czy plik jest poprawny.');
-    }
-  };
-
-  reader.readAsText(file);
+    reader.readAsText(file);
 });
